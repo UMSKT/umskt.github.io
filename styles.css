@@ -1,66 +1,192 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin:0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
 }
 
 .black_text {
-    color: black;
+  color: black;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    border-bottom:1px solid white;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  /* border-bottom:1px solid white; */
+  border: none;
+  position: fixed;
+  z-index: 100000000;
+  width: 100%;
+}
+
+#half {
+  width: 50%;
+  margin-left: 25%;
+}
+
+#right {
+  float: right;
+}
+
+li {
+  float: left;
+}
+
+#home {
+  padding: 2px 5px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+#banner {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 46px;
+}
+
+#bg {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: opacity(50%);
+}
+
+#banner2 {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 46px;
+}
+
+#bg2 {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  filter: opacity(50%);
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#content {
+  width: 50%;
+  margin-left: 25%;
+}
+
+#dl {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#dl th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+#dl tr:first-child {background-color:#555;font-weight:bolder;}
+h2 {font-weight:bold;}
+
+@media screen and (max-width:299px) {
+  #half {
+    width: 96%;
+    margin-left: 2%;
   }
-  #half {width:50%;margin-left:25%;}
-  #right {float:right;}
-  
-  li {
+
+  #content {
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  #right {
     float: left;
+    font-size: 12px;
   }
-  #home {padding:2px 5px;}
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+
+  #right a {
+    padding: 5px 15px;
   }
-  
-  li a:hover:not(.active) {
-    background-color: #111;
+
+  #banner,
+  #banner2 {
+    padding-top: 70px;
   }
-  
-  .active {
-    background-color: #04AA6D;
+
+  .centered {
+    top: 55%;
   }
-  #banner { position: relative;
-    text-align: center;
-    color: white;}
-  #bg {width:100%;height:300px;object-fit: cover;filter: opacity(50%);}
-  #banner2 { position: relative;
-    text-align: center;
-    color: white;}
-  #bg2 {width:100%;height:150px;object-fit: cover;filter: opacity(50%);}
-    .centered {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    #content{width:50%;margin-left:25%;}
-    #dl {
-      border-collapse: collapse;
-      width:100%;
-    }
-    #dl th, td {
-      border: 1px solid black;
-      padding: 10px;
-      text-align: center;
-    }
+}
+
+@media screen and (min-width:300px) and (max-width:450px) {
+  #half {
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  #content {
+    width: 96%;
+    margin-left: 2%;
+  }
+
+}
+
+@media screen and (min-width:451px) and (max-width: 800px) {
+  #half {
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  #content {
+    width: 96%;
+    margin-left: 2%;
+  }
+
+}
+
+@media screen and (min-width:801px) and (max-width: 1100px) {
+  #half {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  #content {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+ul .icon {
+  display: none;
+}
+
+table a {
+  text-decoration: none;
+  color: white;
+}
+
+table a:hover {
+  color: #bbb;
+}
