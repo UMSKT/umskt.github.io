@@ -88,7 +88,7 @@ li a:hover:not(.active) {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
+  color:black;
 }
 
 #content {
@@ -107,8 +107,15 @@ td {
   padding: 10px;
   text-align: center;
 }
-#dl tr:first-child {background-color:#555;font-weight:bolder;}
-h2 {font-weight:bold;}
+
+#dl tr:first-child {
+  background-color: #999;
+  font-weight: bolder;
+}
+
+h2 {
+  font-weight: bold;
+}
 
 @media screen and (max-width:299px) {
   #half {
@@ -151,6 +158,23 @@ h2 {font-weight:bold;}
     margin-left: 2%;
   }
 
+  #right {
+    float: left;
+    font-size: 12px;
+  }
+
+  #right a {
+    padding: 5px 15px;
+  }
+
+  #banner,
+  #banner2 {
+    padding-top: 70px;
+  }
+
+  .centered {
+    top: 55%;
+  }
 }
 
 @media screen and (min-width:451px) and (max-width: 800px) {
@@ -184,9 +208,9 @@ ul .icon {
 
 table a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 table a:hover {
-  color: #bbb;
+  color: #777;
 }
