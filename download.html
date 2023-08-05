@@ -7,6 +7,23 @@
   <link rel="icon" type="image/x-icon" href="./logo.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (e) {
+      if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
   <title>UMSKT - Downloads</title>
 </head>
 
@@ -26,8 +43,13 @@
         <li><a href="./download.html">Downloads</a></li>
         <li><a href="./documentation.html">Documentation</a></li>
       </div>
+      <li id="right2"><a class="dropbtn" onclick="myFunction()">Menu <i class="fa fa-bars" aria-hidden="true"></i></a></li>
     </div>
   </ul>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="./download.html">Downloads</a>
+    <a href="./documentation.html">Documentation</a>
+  </div>
   <div id="banner2"><img src="bg.jpeg" id="bg2">
     <h1 class="centered">Downloads</h1>
   </div>
@@ -44,24 +66,24 @@
       </tr>
       <tr>
         <td>
-          <img src="windows_icon.png" alt="Windows Icon" width="30" height="30"><br>
-
+          <img src="windows_icon.png" alt="Windows Icon" width="30" height="30">
+          <br>
           <span>Windows</span>
         </td>
         <td><a href="https://github.com/UMSKT/UMSKT/actions/workflows/windows.yml">Download for Windows</a></td>
       </tr>
       <tr>
         <td>
-          <img src="mac_icon.png" alt="macOS Icon" width="30" height="30"><br>
-
+          <img src="mac_icon.png" alt="macOS Icon" width="30" height="30">
+          <br>
           <span>macOS</span>
         </td>
         <td><a href="https://github.com/UMSKT/UMSKT/actions/workflows/macos.yml">Download for macOS</a></td>
       </tr>
       <tr>
         <td>
-          <img src="linux_icon.png" alt="Linux Icon" width="30" height="30"><br>
-
+          <img src="linux_icon.png" alt="Linux Icon" width="30" height="30">
+          <br>
           <span>Linux</span>
         </td>
         <td><a href="dhttps://github.com/UMSKT/UMSKT/actions/workflows/linux.yml">Download for Linux</a></td>
@@ -76,7 +98,8 @@
       </tr>
       <tr>
         <td>
-          <img src="dos_djgpp_icon.png" alt="DOS DJGPP Icon" width="30" height="30"><br>
+          <img src="dos_djgpp_icon.png" alt="DOS DJGPP Icon" width="30" height="30">
+          <br>
           <span>DOS DJGPP</span>
         </td>
         <td><a href="dhttps://github.com/UMSKT/UMSKT/actions/workflows/dos-djgpp.yml">Download for DOS DJGPP</a></td>

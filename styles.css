@@ -8,7 +8,6 @@ body {
 .black_text {
   color: black;
 }
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -96,6 +95,9 @@ li a:hover:not(.active) {
   margin-left: 25%;
 }
 
+#right {display:block;}
+  .dropbtn {display:none;}
+
 #dl {
   border-collapse: collapse;
   width: 100%;
@@ -128,22 +130,17 @@ h2 {
     margin-left: 2%;
   }
 
-  #right {
-    float: left;
-    font-size: 12px;
-  }
-
-  #right a {
-    padding: 5px 15px;
-  }
+  #right {display:none;}
+  .dropbtn {display:block;}
+  #right2 {float:right;}
 
   #banner,
   #banner2 {
-    padding-top: 70px;
+    padding-top: 46px;
   }
 
   .centered {
-    top: 55%;
+    top: 50%;
   }
 }
 
@@ -158,22 +155,18 @@ h2 {
     margin-left: 2%;
   }
 
-  #right {
-    float: left;
-    font-size: 12px;
-  }
+  #right {display:none;}
+  .dropbtn {display:block;float:right;}
+  #right2 {float:right;}
 
-  #right a {
-    padding: 5px 15px;
-  }
 
   #banner,
   #banner2 {
-    padding-top: 70px;
+    padding-top: 46px;
   }
 
   .centered {
-    top: 55%;
+    top: 50%;
   }
 
 }
@@ -200,11 +193,11 @@ h2 {
 
   #banner,
   #banner2 {
-    padding-top: 70px;
+    padding-top: 46px;
   }
 
   .centered {
-    top: 55%;
+    top: 50%;
   }
 
 }
@@ -218,6 +211,10 @@ h2 {
     width: 96%;
     margin-left: 2%;
   }
+  #right {display:none;}
+  .dropbtn {display:block;float:right;}
+  #right2 {float:right;}
+
 
 }
 
@@ -243,5 +240,37 @@ table a {
 }
 
 table a:hover {
-  color: #777;
+  color: #333;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 96%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top:56px;
+  right:2%;
+  -moz-border-radius: 10px; 
+  -khtml-border-radius: 10px; 
+  -webkit-border-radius: 10px; 
+  border-radius: 10px; 
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-radius: inherit;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
 }

@@ -7,6 +7,23 @@
   <link rel="icon" type="image/x-icon" href="./logo.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (e) {
+      if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
   <title>UMSKT - Documentation</title>
 </head>
 
@@ -26,8 +43,13 @@
         <li><a href="./download.html">Downloads</a></li>
         <li><a href="./documentation.html">Documentation</a></li>
       </div>
+      <li id="right2"><a class="dropbtn" onclick="myFunction()">Menu <i class="fa fa-bars" aria-hidden="true"></i></a></li>
     </div>
   </ul>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="./download.html">Downloads</a>
+    <a href="./documentation.html">Documentation</a>
+  </div>
   <div id="banner2"><img src="bg.jpeg" id="bg2">
     <h1 class="centered">Documentation</h1>
   </div>
@@ -39,12 +61,36 @@
         <th>URL</th>
       </tr>
       <tr>
-        <td>Python</td>
+        <td>
+          <img src="rust_logo.png" alt="Rust Logo" width="30" height="30">
+          <br>
+          <span>Rust</span>
+        </td>
+        <td><a href="https://github.com/anpage/umskt-rs">https://github.com/anpage/umskt-rs</a></td>
+      </tr>
+    </table>
+    <hr />
+    <h1>Development Libraries</h1>
+    <table border="1" id="dl">
+      <tr>
+        <th>Language</th>
+        <th>URL</th>
+      </tr>
+      <tr>
+        <td>
+          <img src="python_logo.png" alt="Python Logo" width="24" height="30">
+          <br>
+          <span>Python</span>
+        </td>
         <td><a href="https://github.com/techguy16/umsktpy">https://github.com/techguy16/umsktpy</a></td>
       </tr>
       <tr>
-        <td>Rust</td>
-        <td><a href="https://github.com/anpage/umskt-rs">https://github.com/anpage/umskt-rs</a></td>
+        <td>
+          <img src="c.png" alt="C Logo" width="24" height="30">
+          <br>
+          <span>C</span>
+        </td>
+        <td><a href="https://github.com/techguy16/libumskt/releases/tag/umskt">https://github.com/techguy16/libumskt/releases/tag/umskt</a></td>
       </tr>
     </table>
   </div>

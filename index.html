@@ -7,6 +7,23 @@
   <link rel="icon" type="image/x-icon" href="./logo.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (e) {
+      if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+        if (myDropdown.classList.contains('show')) {
+          myDropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
   <title>UMSKT - Home</title>
 </head>
 
@@ -26,8 +43,13 @@
         <li><a href="./download.html">Downloads</a></li>
         <li><a href="./documentation.html">Documentation</a></li>
       </div>
+      <li id="right2"><a class="dropbtn" onclick="myFunction()">Menu <i class="fa fa-bars" aria-hidden="true"></i></a></li>
     </div>
   </ul>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="./download.html">Downloads</a>
+    <a href="./documentation.html">Documentation</a>
+  </div>
   <div id="banner"><img src="bg.jpeg" id="bg">
     <h1 class="centered">Welcome to the UMSKT Project</h1>
   </div>
