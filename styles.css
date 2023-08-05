@@ -175,9 +175,40 @@ h2 {
   .centered {
     top: 55%;
   }
+
 }
 
-@media screen and (min-width:451px) and (max-width: 800px) {
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  #half {
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  #content {
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  #right {
+    float: left;
+    font-size: 12px;
+  }
+
+  #right a {
+    padding: 5px 15px;
+  }
+
+  #banner,
+  #banner2 {
+    padding-top: 70px;
+  }
+
+  .centered {
+    top: 55%;
+  }
+
+}
+@media screen and (min-width:451px) and (max-width: 600px) {
   #half {
     width: 96%;
     margin-left: 2%;
