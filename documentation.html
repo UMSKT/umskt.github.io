@@ -7,6 +7,16 @@
   <link rel="icon" type="image/x-icon" href="./logo.png">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    code {
+      background-color:lightgrey;
+      padding-top:3px;
+      padding-bottom:3px;
+      padding-left:5px;
+      padding-right:5px;
+      border-radius:5px;
+    }
+  </style>
   <script>
     /* When the user clicks on the button, 
     toggle between hiding and showing the dropdown content */
@@ -56,11 +66,174 @@
     <h1 class="centered">Documentation</h1>
   </div>
   <div id="content">
+    <h3>BINK IDs</h3>
+    <p>Use these in UMSKT, umsktpy or umskt-rs by running the command <code>{umskt executable} -b {bink id}</code>.</p>
+    <table>
+	<tr>
+		<th>Product</th>
+		<th>BINK IDs</th>
+	</tr>	<tr>
+		<td>Commerce Server 2002</td>
+		<td><code>0E</code>, <code>0F</code></td></tr>
+	<tr>
+		<td>Halo: Combat Evolved</td>
+		<td><code>50</code>, <code>51</code></td></tr>
+	<tr>
+		<td>Halo: Custom Edition</td>
+		<td><code>50</code>, <code>51</code></td></tr>
+	<tr>
+		<td>Identity Lifecycle Manager 2007</td>
+		<td><code>78</code>, <code>79</code></td></tr>
+	<tr>
+		<td>Internet Security and Acceleration (ISA) Server 2004</td>
+		<td><code>06</code>, <code>07</code></td></tr>
+	<tr>
+		<td>Office 2000</td>
+		<td><code>04</code>, <code>05</code></td></tr>
+	<tr>
+		<td>Office 2003 Applications</td>
+		<td><code>6E</code>, <code>6F</code></td></tr>
+	<tr>
+		<td>Office 2003 Professional</td>
+		<td><code>72</code>, <code>73</code></td></tr>
+	<tr>
+		<td>Office 2003 Small Business</td>
+		<td><code>70</code>, <code>71</code></td></tr>
+	<tr>
+		<td>Office 2003 Student and Teacher</td>
+		<td><code>70</code>, <code>71</code></td></tr>
+	<tr>
+		<td>Office 2007 Applications</td>
+		<td><code>7E</code>, <code>7F</code></td></tr>
+	<tr>
+		<td>Office 2007 Basic / Small Business</td>
+		<td><code>80</code>, <code>81</code></td></tr>
+	<tr>
+		<td>Office 2007 Home & Student</td>
+		<td><code>88</code>, <code>89</code></td></tr>
+	<tr>
+		<td>Office 2007 Standard / Professional / Ultimate / Enterprise</td>
+		<td><code>82</code>, <code>83</code></td></tr>
+	<tr>
+		<td>Office Communicator 2007</td>
+		<td><code>0C</code>, <code>0D</code></td></tr>
+	<tr>
+		<td>Office XP</td>
+		<td><code>22</code>, <code>23</code></td></tr>
+	<tr>
+		<td>Office XP Applications</td>
+		<td><code>20</code>, <code>21</code></td></tr>
+	<tr>
+		<td>Office for Mac 2004 / 2008</td>
+		<td><code>18</code>, <code>19</code></td></tr>
+	<tr>
+		<td>PLUS! for Windows XP</td>
+		<td><code>08</code>, <code>09</code></td></tr>
+	<tr>
+		<td>Plus! Digital Media Edition for Windows XP</td>
+		<td><code>52</code>, <code>53</code></td></tr>
+	<tr>
+		<td>Visual Studio .Net / .Net 2003</td>
+		<td><code>24</code>, <code>25</code></td></tr>
+	<tr>
+		<td>Visual Studio 2005</td>
+		<td><code>52</code>, <code>53</code></td></tr>
+	<tr>
+		<td>Visual Studio 2008</td>
+		<td><code>78</code>, <code>79</code></td></tr>
+	<tr>
+		<td>Windows 2000 Professional</td>
+		<td><code>12</code>, <code>13</code></td></tr>
+	<tr>
+		<td>Windows 2000 Server (all)</td>
+		<td><code>0A</code>, <code>13</code></td></tr>
+	<tr>
+		<td>Windows 98 (all)</td>
+		<td><code>02</code>, <code>03</code></td></tr>
+	<tr>
+		<td>Windows CE .Net Platform Builder 4</td>
+		<td><code>00</code>, <code>01</code></td></tr>
+	<tr>
+		<td>Windows CE .Net Platform Builder 5</td>
+		<td><code>0D</code>, <code>0D</code></td></tr>
+	<tr>
+		<td>Windows CE Platform Builder 3</td>
+		<td><code>00</code>, <code>01</code>, <code>0E</code>, <code>0D</code>, <code>0F</code></td></tr>
+	<tr>
+		<td>Windows Embedded POSReady 2009</td>
+		<td><code>0D</code>, <code>0D</code></td></tr>
+	<tr>
+		<td>Windows Longhorn (6.0.3683.0 -> 6.0.4029.0)</td>
+		<td><code>40</code>, <code>41</code></td></tr>
+	<tr>
+		<td>Windows Longhorn (6.0.4033.0)</td>
+		<td><code>54</code>, <code>55</code></td></tr>
+	<tr>
+		<td>Windows Longhorn (6.0.4039.0 -> Pre PIDGENX)</td>
+		<td><code>74</code>, <code>75</code></td></tr>
+	<tr>
+		<td>Windows ME</td>
+		<td><code>1C</code>, <code>1D</code></td></tr>
+	<tr>
+		<td>Windows Server 2003</td>
+		<td><code>54</code>, <code>55</code>, <code>58</code>, <code>59</code></td></tr>
+	<tr>
+		<td>Windows Server 2003 64 Bit</td>
+		<td><code>68</code>, <code>69</code>, <code>6C</code>, <code>6D</code></td></tr>
+	<tr>
+		<td>Windows Server 2003 64 Bit VLK</td>
+		<td><code>68</code>, <code>69</code>, <code>6C</code>, <code>6D</code></td></tr>
+	<tr>
+		<td>Windows Server 2003 VLK</td>
+		<td><code>5A</code>, <code>5B</code></td></tr>
+	<tr>
+		<td>Windows XP Fundamentals for Legacy PCs</td>
+		<td><code>2E</code>, <code>2F</code></td></tr>
+	<tr>
+		<td>Windows XP Home</td>
+		<td><code>2A</code>, <code>2B</code></td></tr>
+	<tr>
+		<td>Windows XP Pro</td>
+		<td><code>2C</code>, <code>2D</code></td></tr>
+	<tr>
+		<td>Windows XP Pro 64 Bit Edition</td>
+		<td><code>66</code>, <code>67</code></td></tr>
+	<tr>
+		<td>Windows XP Pro 64 Bit Edition VLK</td>
+		<td><code>64</code>, <code>65</code></td></tr>
+	<tr>
+		<td>Windows XP Pro IA-64</td>
+		<td><code>2C</code>, <code>2D</code></td></tr>
+	<tr>
+		<td>Windows XP Pro VLK</td>
+		<td><code>2E</code>, <code>2F</code></td></tr>
+	<tr>
+		<td>Windows XP Professional Evaluation</td>
+		<td><code>28</code>, <code>29</code></td></tr>
+	<tr>
+		<td>Windows XP Professional K</td>
+		<td><code>30</code>, <code>31</code></td></tr>
+	<tr>
+		<td>Windows XP Starter Edition</td>
+		<td><code>32</code>, <code>33</code></td></tr>
+	<tr>
+		<td>Works Suite 2003 and 2004</td>
+		<td><code>20</code>, <code>21</code></td></tr>
+</table>
+    <hr />
     <h1>Ports</h1>
     <table border="1" id="dl">
       <tr>
         <th>Language</th>
         <th>URL</th>
+      </tr>
+      <tr>
+        <td>
+          <img src="images/python_logo.png" alt="Python Logo" width="24" height="30">
+          <br>
+          <span>Python</span>
+        </td>
+        <td><a href="https://github.com/techguy16/umsktpy/tree/nobridge">https://github.com/techguy16/umsktpy</a></td>
       </tr>
       <tr>
         <td>
@@ -84,7 +257,7 @@
           <br>
           <span>Python</span>
         </td>
-        <td><a href="https://github.com/techguy16/umsktpy">https://github.com/techguy16/umsktpy</a></td>
+        <td><a href="https://github.com/techguy16/umsktpy/tree/main">https://github.com/techguy16/umsktpy</a></td>
       </tr>
       <tr>
         <td>
