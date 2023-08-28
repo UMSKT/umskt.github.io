@@ -240,7 +240,7 @@ table a:hover {
   min-width: 96%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  margin-top:56px;
+  margin-top:62px; /* adjust for more menu items */
   right:2%;
   -moz-border-radius: 10px; 
   -khtml-border-radius: 10px; 
