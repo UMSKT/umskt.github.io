@@ -8,7 +8,8 @@ body {
 .black_text {
   color: black;
 }
-ul {
+
+#ul2 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -42,8 +43,10 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 13px 16px;
   text-decoration: none;
+  border: 3px solid #333;
+  border-radius: 10px;
 }
 
 li a:hover:not(.active) {
@@ -87,7 +90,7 @@ li a:hover:not(.active) {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color:black;
+  color: black;
 }
 
 #content {
@@ -95,12 +98,18 @@ li a:hover:not(.active) {
   margin-left: 25%;
 }
 
-#right {display:block;}
-  .dropbtn {display:none;}
+#right {
+  display: block;
+}
+
+.dropbtn {
+  display: none;
+}
 
 #dl {
   border-collapse: collapse;
   width: 100%;
+  border-radius: 10px;
 }
 
 #dl th,
@@ -130,9 +139,17 @@ h2 {
     margin-left: 2%;
   }
 
-  #right {display:none;}
-  .dropbtn {display:block;}
-  #right2 {float:right;}
+  #right {
+    display: none;
+  }
+
+  .dropbtn {
+    display: block;
+  }
+
+  #right2 {
+    float: right;
+  }
 
   #banner,
   #banner2 {
@@ -155,9 +172,18 @@ h2 {
     margin-left: 2%;
   }
 
-  #right {display:none;}
-  .dropbtn {display:block;float:right;}
-  #right2 {float:right;}
+  #right {
+    display: none;
+  }
+
+  .dropbtn {
+    display: block;
+    float: right;
+  }
+
+  #right2 {
+    float: right;
+  }
 
 
   #banner,
@@ -192,6 +218,7 @@ h2 {
   }
 
 }
+
 @media screen and (min-width:451px) and (max-width: 600px) {
   #half {
     width: 96%;
@@ -202,9 +229,19 @@ h2 {
     width: 96%;
     margin-left: 2%;
   }
-  #right {display:none;}
-  .dropbtn {display:block;float:right;}
-  #right2 {float:right;}
+
+  #right {
+    display: none;
+  }
+
+  .dropbtn {
+    display: block;
+    float: right;
+  }
+
+  #right2 {
+    float: right;
+  }
 
 
 }
@@ -233,19 +270,21 @@ table a {
 table a:hover {
   color: #333;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 96%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  margin-top:62px; /* adjust for more menu items */
-  right:2%;
-  -moz-border-radius: 10px; 
-  -khtml-border-radius: 10px; 
-  -webkit-border-radius: 10px; 
-  border-radius: 10px; 
+  margin-top: 62px;
+  /* adjust for more menu items */
+  right: 2%;
+  -moz-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .dropdown-content a {
@@ -264,4 +303,41 @@ table a:hover {
 
 .show {
   display: block;
+}
+
+code {
+  background-color: lightgrey;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
+#content a {
+  text-decoration: none;
+}
+
+#content a:hover {
+  text-decoration: underline;
+}
+
+footer a:visited {
+  color: blue;
+}
+
+#content h1 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+#contact-methods {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#contact-methods th {
+  padding-right: 10px;
+  padding-left: 10px;
 }
