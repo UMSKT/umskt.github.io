@@ -341,3 +341,23 @@ footer a:visited {
   padding-right: 10px;
   padding-left: 10px;
 }
+
+@media screen and (max-width:500px) {
+  #r500-down {
+    display: block;
+  }
+
+  #r500-up {
+    display: none;
+  }
+}
+
+@media screen and (min-width:501px) {
+  #r500-down {
+    display: none;
+  }
+
+  #r500-up {
+    display: block;
+  }
+}
