@@ -1,3 +1,23 @@
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+
 # Windows XP Confirmation IDs
 
 By WitherOrNot
@@ -10,19 +30,15 @@ If you are not interested in the mathematics, please skip to [Validation Mechani
 
 ## Hyperelliptic Curves
 
-An imaginary hyperelliptic curve `H` of genus `g` is a set of points $(x,y)$ that satisfies the following relation:
+An imaginary hyperelliptic curve $H$ of genus $g$ is a set of points $(x,y)$ that satisfies the following relation:
 
-```math
-y^2 + y \cdot h(x) \equiv F(x) \pmod {p}
-```
+$$ y^2 + y \cdot h(x) \equiv F(x) \pmod {p} $$
 
-where `F(x)` is a monic polynomial of degree `2g+1`, `h(x)` is a polynomial of degree less than `g+2`, and `p` is a prime number.
+where $F(x)$ is a monic polynomial of degree $2g+1$, $h(x)$ is a polynomial of degree less than $g+2$, and $p$ is a prime number.
 
-For this write-up, we will be focusing on the curves used by the Confirmation ID system which are genus 2 curves where `h(x) = 0`, thus
+For this write-up, we will be focusing on the curves used by the Confirmation ID system which are genus 2 curves where $h(x) = 0$, thus
 
-```math
-y^2 \equiv x^5 + a_{4}x^4 + a_{3}x^3 + a_{2}x^2 + a_{1}x + a_0 \pmod {p}
-```
+$$ y^2 \equiv x^5 + a_{4}x^4 + a_{3}x^3 + a_{2}x^2 + a_{1}x + a_0 \pmod {p} $$
 
 Those familiar with the related concept of elliptic curves may assume points on this curve follow a similar group law. However, the group law for hyperelliptic curves is very different.
 
@@ -40,15 +56,13 @@ Therefore, a different group representation will be needed for hyperelliptic cur
 
 ## Divisors
 
-We define the divisor `D` over the curve `E` to be a formal linear combination of all `n` points `P_i` on the curve with weights `c_i`.
+We define the divisor $D$ over the curve $E$ to be a formal linear combination of all $n$ points $P_i$ on the curve with weights $c_i$.
 
-```math
-D = \sum_{i=1}^{n} c_{i}P_{i}
-```
+$$ D = \sum_{i=1}^{n} c_{i}P_{i} $$
 
 "Formal" means that there is no actual definition of summation or scalar multiplication on points, it simply denotes the behavior we want divisors to have.
 
-The only operation that is defined on individual points is negation, which for a point `P = (x,y)` is defined as `-P = (x,-y)`. 
+The only operation that is defined on individual points is negation, which for a point $P = (x,y)$ is defined as $-P = (x,-y)$. 
 
 Divisors, however, can be added and multiplied by scalars according to their definition. This allows the construction of an abelian (commutative) additive group, but this group is too large to be cryptographically useful. Therefore, we will need to consider a subset of divisors with useful properties.
 
