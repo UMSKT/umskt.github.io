@@ -44,13 +44,13 @@ Those familiar with the related concept of elliptic curves may assume points on 
 
 As a refresher, for points on elliptic curves, a form of addition can be done by defining the sum of 2 points to be the reflection of their third collinear point over the y-axis.
 
-![Elliptic curve](./images/ECClines.svg.png)
+![Elliptic curve](https://raw.githubusercontent.com/UMSKT/writeups/main/images/ECClines.svg.png)
 
 This works because any line on the projective plane (a plane with a defined point at infinity) that passes through 2 points on this curve will intersect exactly at one other point, even if the two points are identical (we define the point at infinity to be on the curve).
 
 As an exercise for the reader, see how the same property fails to hold on the following hyperelliptic curve.
 
-![Hyperelliptic curve](./images/Example_of_a_hyperelliptic_curve.svg.png)
+![Hyperelliptic curve](https://raw.githubusercontent.com/UMSKT/writeups/main/images/Example_of_a_hyperelliptic_curve.svg.png)
 
 Therefore, a different group representation will be needed for hyperelliptic curves.
 
@@ -139,7 +139,7 @@ Computation of $k$ and $\\#J(H)$ is a difficult process that warrants its own wr
 
 The confirmation ID is derived directly from a value known as the *Installation ID*. This value is displayed to the user when selecting the "Telephone Activation" option when activating a product, as shown below.
 
-![CID Screenshot](https://github.com/umskt/writeups/images/cid_screenshot.png)
+![CID Screenshot](https://raw.githubusercontent.com/UMSKT/writeups/main/images/cid_screenshot.png)
 
 As seen in the screenshot, the confirmation ID is broken into 6-digit groups. This is related to the first validation step, known as the checksum.
 
