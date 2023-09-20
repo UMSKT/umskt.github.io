@@ -34,8 +34,6 @@ It's called ECDLP (Elliptic Curve Discrete Logarithm Problem) Solver by Mr. HAAN
 
 The ReadMe file that comes with the version **0.2a** of the solver is good enough by itself, so anyone with a brain will be able to set that tool up. However, it's not open-source, so integrating it into my keygen is proven impossible.
 
-<details open>
-
 In the ideal scenario, the keygen would ask you for a BINK-resource extracted from `pidgen.dll`, which it would then unpack into the following segments:
 * Public key (`pubX`; `pubY`)
 * Generator (`genX`; `genY`)
@@ -43,16 +41,6 @@ In the ideal scenario, the keygen would ask you for a BINK-resource extracted fr
 * Point count `p`
 
 Knowing these segments, the keygen would bruteforce the geneator order `genOrder` using Schoof's algorithm followed by the private key `privateKey`, leveraging the calculated `genOrder` to use the most optimal Pollard's Rho algorithm. There's no doubt we can crack any private key in a matter of 20 minutes using modern computational power, provided we have the working algorithm.
-
-Once the keygen finishes bruteforcing the correct private key, the task boils down to actually generating a key, **which this keygen does**.
-To give you a better perspective, I can provide you with the flow of the ideal keygen. Crossed out is what my keygen implements:
-* ~~BINK resource extraction~~
-* Bruteforce Elliptic Curve discrete logarithm solution (`genOrder`, `privateKey`)
-* ~~Product Key processing mechanism~~
-* ~~Windows XP key generation~~
-* ~~Windows XP key validation~~
-* ~~Windows Server 2003 key generation~~
-</details>
 
 # Principle of operation
 We need to use a random Raw Product Key as a base to generate a Product ID in a form of `AAAAA-BBB-CCCCCCS-DDEEE`.
@@ -76,7 +64,7 @@ The `BBB` and `CCCCCC` sections essentially encode the Raw Product Key. For exam
 The check digit `S` is picked so that the sum of all `C` digits with it added makes a number divisible by 7.
 
 The public key index `DD` lets us know which public key was used to successfully verify the authenticity of our Product Key.
-For example, it's `22` for Professional keys and `23` for VLK keys.
+For example, it's `22` for Professional keys and `23` for VLK keys. This value is equal to half of the BINK ID (discussed below).
 
 A random number `EEE` is used to generate a different Installation ID each time.
 
@@ -310,10 +298,12 @@ Afterwards, the value $a$, along with some other information, can be sent to the
 2. Compute the random point $R = cG$
 3. Let `digest2 = SHA1(79 || m || R.x || R.y)`
 4. Let $h$ be integer formed by the lower 31 bits of `digest2`
-5. Let $s = \frac{-ek + \sqrt{\left(ek\right)^2 + 4c}}{2} \pmod {n}$
-6. Compute $a$ by unknown algorithm
-7. Pack $s$, $h$, and $m$, and $a$ into a 114-bit integer
-8. Convert this integer into a product key, using base-24 conversion
+5. Compute `digest1 = SHA1(5D || m || h || a || 00 00)`
+6. Let $e$ be the integer formed by the lower 62 bits of `digest1`
+7. Let $s = \frac{-ek + \sqrt{\left(ek\right)^2 + 4c}}{2} \pmod {n}$
+8. Compute $a$ by unknown algorithm
+9. Pack $s$, $h$, and $m$, and $a$ into a 114-bit integer
+10. Convert this integer into a product key, using base-24 conversion
 
 #### Mathematical mechanism
 
