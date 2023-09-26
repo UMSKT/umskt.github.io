@@ -11,9 +11,9 @@ Visit [https://umskt.github.io](https://umskt.github.io) to see it in action.
 * Downloads for UMSKT and xpmgr
 * List of BINK IDs, Ports and Development Libraries
 * How to get in touch
+* Documents archive/library
 
 ### Coming soon
 
-* Command line options help
 * Documents archive/library
 * Frequently Asked Questions
