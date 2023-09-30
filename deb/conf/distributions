@@ -1,0 +1,7 @@
+Origin: UMSKT
+Label: Universal MS Key Toolkit
+Suite: unstable
+Codename: unstable
+Architectures: amd64
+Components: dev
+Description: Universal MS Key Toolkit

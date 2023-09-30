@@ -1,0 +1,14 @@
+Package: umskt
+Version: 0.1
+Architecture: amd64
+Maintainer: UMSKT Contributors <coming@soon.com>
+Installed-Size: 7192
+Priority: optional
+Section: system
+Filename: pool/dev/u/umskt/umskt_0.1_amd64.deb
+Size: 7693152
+SHA256: 9dd63c0b52e043a28b1100a67073aeaac86330fca26ab4ed06aff1311dd7ab0b
+SHA1: 0564c0e6850a21b0533886d0c046fb084ceb5e79
+MD5sum: 5e2f1ad8e8f4b87bbccf58dc486a4de9
+Description: Universal MS Key Toolkit
+
