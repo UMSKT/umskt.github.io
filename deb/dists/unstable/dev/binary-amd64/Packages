@@ -1,3 +1,23 @@
+Package: mskt
+Version: 1.0.0
+License: GPL-2.0
+Vendor: anpage <coming@soon.com>
+Architecture: amd64
+Maintainer: anpage <coming@soon.com>
+Installed-Size: 196313
+Depends: libgtk-3-0, libnotify4, libnss3, libxss1, libxtst6, xdg-utils, libatspi2.0-0, libuuid1, libsecret-1-0
+Recommends: libappindicator3-1
+Homepage: https://mskt.surge.sh
+Priority: optional
+Section: default
+Filename: pool/dev/m/mskt/mskt_1.0.0_amd64.deb
+Size: 59173786
+SHA256: 5ccad5dea0a1479960fe5a659dcb0f095864b5f87874562106ad1e7f69187a9f
+SHA1: dcd88d9bfe5d04d6acffb1b7ce89acc43445dffb
+MD5sum: 9fa12358a82818d246a781ff4a214c98
+Description: 
+  Online frontend for UMSKT
+
 Package: umskt
 Version: 0.1
 Architecture: amd64
