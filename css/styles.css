@@ -3,6 +3,11 @@
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  background-color: white;
+  color:black;
+}
+html {
+  background-color: white;
 }
 
 .black_text {
@@ -352,6 +357,13 @@ footer a:visited {
   }
 }
 
+#r500-down table {
+  border:1px solid black;
+  width:155px;
+}
+#r500-up table {
+  width:143px;
+}
 @media screen and (min-width:651px) {
   #r500-down {
     display: none;
