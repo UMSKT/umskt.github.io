@@ -15,5 +15,5 @@ Visit [https://umskt.github.io](https://umskt.github.io) to see it in action.
 
 ### Coming soon
 
-* Documents archive/library
 * Frequently Asked Questions
+* Command line options documentation
